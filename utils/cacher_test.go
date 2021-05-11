@@ -41,9 +41,9 @@ func getCache() *RedisCache {
 func TestGetSet(t *testing.T) {
 	var err error
 	cache := getCache()
-	//err = cache.Set("age", "23", 3600)
-	//NoError(t, err)
+	err = cache.Set("test", "23", 0)
+	NoError(t, err)
 	getInt, err := cache.GetInt("age")
 	NoError(t, err)
-	Equal(t, 20, getInt)
+	Equal(t, 23, getInt)
 }

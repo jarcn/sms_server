@@ -53,7 +53,9 @@ func (rc *RedisCache) StartAndGC(options interface{}) error {
 			opts.MaxIdle = 3
 		}
 		if opts.Prefix == "" {
-			opts.Prefix = "default:"
+			rc.prefix = "default:"
+		} else {
+			rc.prefix = opts.Prefix
 		}
 		if opts.IdleTimeout == 0 {
 			opts.IdleTimeout = 300
