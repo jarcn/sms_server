@@ -47,5 +47,4 @@ func main() {
 	initRouters(g)
 	g.Run()
 	fmt.Println("sms_server is running")
-
 }

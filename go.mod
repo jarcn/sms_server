@@ -3,10 +3,12 @@ module sms_server
 go 1.15
 
 require (
+	github.com/garyburd/redigo v1.6.0 // instead of v2.0.0
 	github.com/gin-gonic/gin v1.5.0
 	github.com/go-playground/universal-translator v0.17.0 // indirect
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/go-xorm/xorm v0.7.9
+	github.com/gomodule/redigo v1.8.4
 	github.com/json-iterator/go v1.1.8 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/leodido/go-urn v1.2.0 // indirect
