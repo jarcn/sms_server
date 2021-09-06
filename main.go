@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"sms_server/conf"
 	"sms_server/ctrl"
 	"sms_server/r2m"
+
+	"github.com/gin-gonic/gin"
 )
 
 func init() {
@@ -34,11 +35,13 @@ func init() {
 			}
 		}*/
 }
+
 func initRouters(g *gin.Engine) {
 	g.POST("/code/send", ctrl.SendCode)
 	g.POST("/code/check", ctrl.CheckCode)
 	g.POST("/async", ctrl.AsynchronousPost)
 }
+
 func main() {
 	fmt.Println("start sms_server ...")
 	g := gin.Default()
