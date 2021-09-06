@@ -2,11 +2,12 @@ package r2m
 
 import (
 	"fmt"
-	"github.com/go-redis/redis"
 	"time"
+
+	"github.com/go-redis/redis"
 )
 
-//单点redis
+//单点redis test git tool with vscode
 var RedisClient *redis.Client
 
 func init() {
