@@ -3,13 +3,14 @@ package admin
 import (
 	"context"
 	"fmt"
+	"testing"
+
 	"github.com/apache/rocketmq-client-go/v2/admin"
 	"github.com/apache/rocketmq-client-go/v2/primitive"
-	"testing"
 )
 
 var (
-	topic       = "chenjia_mq_topic"
+	topic       = "qiyee-job-msg-push"
 	nameSrvAddr = []string{"39.105.153.230:9876"}
 	brokerAddr  = "39.105.153.230:10911"
 )

@@ -1,10 +1,14 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"os"
 	"sms_server/conf"
 	"sms_server/ctrl"
 	"sms_server/r2m"
+	"strconv"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 )
@@ -21,19 +25,20 @@ func init() {
 }
 
 func init() {
-	/*	if appkey := os.Getenv("yun.pian.appkey"); appkey != "" {
-			conf.Cfg.YPAppKey = appkey
+	if appkey := os.Getenv("yun.pian.appkey"); appkey != "" {
+		conf.Cfg.YPAppKey = appkey
+	}
+	if conf.Cfg.YPAppKey == "" {
+		conf.Cfg.YPAppKey = "1234567890"
+		fmt.Println("云片appkey不存在")
+	}
+	if timeOut := os.Getenv("check.code.time.out"); timeOut != "" {
+		if val, err := strconv.Atoi(strings.TrimSpace(timeOut)); err != nil {
+			panic(errors.New("[check.code.time.out] 格式错误"))
+		} else {
+			conf.Cfg.KeyTimeOut = int64(val)
 		}
-		if conf.Cfg.YPAppKey == "" {
-			panic(errors.New("云片appkey不存在"))
-		}
-		if timeOut := os.Getenv("check.code.time.out"); timeOut != "" {
-			if val, err := strconv.Atoi(strings.TrimSpace(timeOut)); err != nil {
-				panic(errors.New("[check.code.time.out] 格式错误"))
-			} else {
-				conf.Cfg.KeyTimeOut = int64(val)
-			}
-		}*/
+	}
 }
 
 func initRouters(g *gin.Engine) {

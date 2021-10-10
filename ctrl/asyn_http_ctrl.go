@@ -1,9 +1,10 @@
 package ctrl
 
 import (
-	"github.com/gin-gonic/gin"
 	"sms_server/common"
 	"sms_server/r2m"
+
+	"github.com/gin-gonic/gin"
 )
 
 type Asynchronous struct {
