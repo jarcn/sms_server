@@ -20,6 +20,7 @@ require (
 	github.com/ugorji/go v1.2.5 // indirect
 	github.com/xuri/excelize/v2 v2.4.1
 	github.com/yunpian/yunpian-go-sdk v0.0.0-20171206021512-2193bf8a7459
+	golang.org/x/sys v0.0.0-20211025201205-69cdffdb9359 // indirect
 	golang.org/x/text v0.3.6 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	xorm.io/builder v0.3.9 // indirect
