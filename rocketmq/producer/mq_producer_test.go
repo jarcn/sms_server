@@ -14,9 +14,10 @@ import (
 )
 
 var (
-	topic = "qiyee-job-msg-push"
-	// nameSrvAddr = []string{"172.16.5.37:9876", "172.16.5.38:9876"}
-	nameSrvAddr = []string{"172.16.5.45:9876", "172.16.5.46:9876"}
+	topic       = "qiyee-job-msg-push"
+	nameSrvAddr = []string{"172.16.5.37:9876", "172.16.5.38:9876"}
+	// nameSrvAddr = []string{"10.18.16.16:9876", "10.18.16.17:9876"}
+	// nameSrvAddr = []string{"172.16.5.45:9876", "172.16.5.46:9876"}
 )
 
 func TestProducer(t *testing.T) {
@@ -59,9 +60,9 @@ func builderMsg() string {
 		Summary:       "mq test",
 		FromUserId:    10086,
 		ToUserId:      10010,
-		MsgType:       26005,
+		MsgType:       26004,
 		KeyPair:       map[string]string{},
-		PushChanneles: []string{"inbox"},
+		PushChanneles: []string{"push"},
 	}
 
 	jsons, errs := json.Marshal(msg) //转换成JSON返回的是byte[]
